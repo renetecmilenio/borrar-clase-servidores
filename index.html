@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-yEPZ7jP9S0QKiUQ0m3jjsO4ProIW7wvR9gXkI7JOGa2XVsw53Yke2bsdkBbjmmiX" crossorigin="anonymous">
+
+    <style>
+        .hero-image {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./principal.jpg");
+            height: 300px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+        }
+
+        .hero-text {
+            text-align: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+        }
+
+        .hero-text button {
+            border: none;
+            outline: 0;
+            display: inline-block;
+            padding: 10px 25px;
+            color: black;
+            background-color: #ddd;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .hero-text button:hover {
+            background-color: #555;
+            color: white;
+        }
+
+        .bounce {
+            transform: translateY(0);
+            transition-duration: .3s;
+            transition-timing-function: cubic-bezier(0.25, 0.1, 0.58, 1);
+        }
+
+        .bounce:hover {
+            transform: translateY(-5px);
+        }
+
+        .escalado {
+            transition: transform .3s ease;
+
+        }
+
+        .escalado:hover {
+            transform: scale(1.1);
+        }
+
+        .rebote {
+            animation-name: rebote;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes rebote {
+
+            0%,
+            100% {
+                transform: translateY(3px);
+            }
+
+            50% {
+                transform: translateY(0);
+            }
+        }
+    </style>
+
+
+</head>
+
+<body class="h-100 m-0">
+
+
+
+
+    <div class="container text-center bg-primary-subtle p-4">
+
+        <!-- titulo -->
+        <div class="row  ">
+            <div class="col-12 bg-light ">
+                <h1 class="fs-2">Tienda <span class="text-primary">Muebles</span></h1>
+            </div>
+        </div>
+
+        <!-- barra de navegación -->
+        <div class="row  mb-2">
+            <nav class="navbar navbar-expand-lg bg-primary">
+                <div class="container-fluid">
+                    <a class="navbar-brand text-white" href="#">Navbar</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link active text-white" aria-current="page" href="#">Inicio</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white" href="#">Nosotros</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link text-white ">Tienda</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white ">Blog</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white ">Galería</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white ">Contacto</a>
+                            </li>
+                        </ul>
+                        <form class="d-flex" role="search">
+                            <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search" />
+                            <button class="btn btn-outline-light" type="submit">Search</button>
+                        </form>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+
+        <!-- hero image -->
+        <div class="row">
+            <div class="hero-image">
+                <div class="hero-text">
+                    <h1 style="font-size:50px">I am John Doe</h1>
+                    <p>And I'm a Photographer</p>
+                    <button>Hire me</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="row my-4">
+            <h2>Nuestro productos</h2>
+        </div>
+
+        <!-- PRIMER PRODUCTO -->
+
+        <div class="row gx-0 mb-5 bounce">
+
+            <div class="col-12 col-xs-12 col-sm-6 overflow-hidden">
+                <img class="w-100 escalado" src="./producto1.png" alt="">
+            </div>
+
+            <div
+                class="col-12 col-xs-12 col-sm-6 d-flex flex-column justify-content-center bg-primary text-white p-5  ">
+                <h3>Producto 1 </h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius aut laudantium dicta iste autem vitae.
+                    Nam molestias enim pariatur dolore hic, maxime commodi. Voluptatibus, quos praesentium velit
+                    necessitatibus labore reprehenderit?</p>
+
+                <span class="fs-2 mb-3">$1000</span>
+                <button class="bg-success w-auto mx-auto px-3 py-1 rebote">Agregar al carrito</button>
+            </div>
+
+
+        </div>
+        <!-- segunda fila (2 productos) -->
+        <section class="container mb-5 ">
+            <div class="row">
+                <article class="col-6 bounce">
+                    <img class="w-100" src="./producto1.png" alt="">
+                    <div
+                        class="col-12 col-xs-12 col-sm-12 d-flex flex-column justify-content-center bg-primary text-white p-5  ">
+                        <h3>Producto 1 </h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius aut laudantium dicta iste autem
+                            vitae.
+                            Nam molestias enim pariatur dolore hic, maxime commodi. Voluptatibus, quos praesentium velit
+                            necessitatibus labore reprehenderit?</p>
+
+                        <span class="fs-2 mb-3">$1000</span>
+                        <button class="bg-success w-auto mx-auto px-3 py-1">Agregar al carrito</button>
+                    </div>
+                </article>
+                <article class="col-6 bounce">
+                    <img class="w-100" src="./producto1.png" alt="">
+                    <div
+                        class="col-12 col-xs-12 col-sm-12 d-flex flex-column justify-content-center bg-primary text-white p-5  ">
+                        <h3>Producto 1 </h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius aut laudantium dicta iste autem
+                            vitae.
+                            Nam molestias enim pariatur dolore hic, maxime commodi. Voluptatibus, quos praesentium velit
+                            necessitatibus labore reprehenderit?</p>
+
+                        <span class="fs-2 mb-3">$1000</span>
+                        <button class="bg-success w-auto mx-auto px-3 py-1">Agregar al carrito</button>
+                    </div>
+                </article>
+
+
+            </div>
+        </section>
+        <!-- tercer FILA (3 productos) -->
+        <section class="container">
+            <div class="row">
+                <article class="col-4 bounce">
+                    <img class="w-100" src="./producto1.png" alt="">
+                    <div
+                        class="col-12 col-xs-12 col-sm-12 d-flex flex-column justify-content-center bg-primary text-white p-5  ">
+                        <h3>Producto 1 </h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius aut laudantium dicta iste autem
+                            vitae.
+                            Nam molestias enim pariatur dolore hic, maxime commodi. Voluptatibus, quos praesentium velit
+                            necessitatibus labore reprehenderit?</p>
+
+                        <span class="fs-2 mb-3">$1000</span>
+                        <button class="bg-success w-auto mx-auto px-3 py-1">Agregar al carrito</button>
+                    </div>
+                </article>
+                <article class="col-4 bounce">
+                    <img class="w-100" src="./producto1.png" alt="">
+                    <div
+                        class="col-12 col-xs-12 col-sm-12 d-flex flex-column justify-content-center bg-primary text-white p-5  ">
+                        <h3>Producto 1 </h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius aut laudantium dicta iste autem
+                            vitae.
+                            Nam molestias enim pariatur dolore hic, maxime commodi. Voluptatibus, quos praesentium velit
+                            necessitatibus labore reprehenderit?</p>
+
+                        <span class="fs-2 mb-3">$1000</span>
+                        <button class="bg-success w-auto mx-auto px-3 py-1">Agregar al carrito</button>
+                    </div>
+                </article>
+                <article class="col-4 bounce">
+                    <img class="w-100 escalado" src="./producto1.png" alt="">
+                    <div
+                        class="col-12 col-xs-12 col-sm-12 d-flex flex-column justify-content-center bg-primary text-white p-5  ">
+                        <h3>Producto 1 </h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius aut laudantium dicta iste autem
+                            vitae.
+                            Nam molestias enim pariatur dolore hic, maxime commodi. Voluptatibus, quos praesentium velit
+                            necessitatibus labore reprehenderit?</p>
+
+                        <span class="fs-2 mb-3">$1000</span>
+                        <button class="bg-success w-auto mx-auto px-3 py-1">Agregar al carrito</button>
+                    </div>
+                </article>
+
+
+            </div>
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-WyOxWvTyr1QaMPfiPJSv76iReVthorl5uWlFtZPyK0IEB0hGzo9y5Bp9mYanr8Bu"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
